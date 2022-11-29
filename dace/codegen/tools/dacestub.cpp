@@ -12,7 +12,7 @@
 #endif
 
 // Workaround (see unload_library)
-#include <omp.h>
+// #include <omp.h>
 
 // Loads a library and returns a handle to it, or NULL if there was an error
 // NOTE: On Windows, path must be given as a Unicode string (UTF-16, or 
@@ -74,7 +74,7 @@ DACE_EXPORTED void unload_library(void *hLibrary) {
         return;
     
     // Workaround so that OpenMP does not go ballistic when calling dlclose()
-    omp_get_max_threads();
+    // omp_get_max_threads();
 
 #ifdef _WIN32
     FreeLibrary((HMODULE)hLibrary);

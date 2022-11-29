@@ -314,7 +314,7 @@ namespace dace
     };
 
     template <typename T, unsigned int N>
-    using vec = typename vector_type<T, N>::aligned;
+    using vec = typename vector_type<T, N>::unaligned;
 
     template <typename T, unsigned int N>
     using vecu = typename vector_type<T, N>::unaligned;
