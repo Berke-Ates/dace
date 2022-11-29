@@ -99,7 +99,7 @@ include_directories(${DACE_RUNTIME_DIR}/include)
 
 # Global DaCe external dependencies
 find_package(Threads REQUIRED)
-find_package(OpenMP REQUIRED COMPONENTS CXX)
+# find_package(OpenMP REQUIRED COMPONENTS CXX)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
 add_definitions(-DDACE_BINARY_DIR=\"${CMAKE_BINARY_DIR}\")
 set(DACE_LIBS ${DACE_LIBS} ${CMAKE_THREAD_LIBS_INIT} ${OpenMP_CXX_LIBRARIES})
